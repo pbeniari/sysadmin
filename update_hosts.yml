@@ -1,0 +1,8 @@
+---
+- name: Register infrastructure server to Satellite
+  hosts: "{{ idm_hosts }}"
+  tasks:
+    - name: update hosts to latest patch levels
+      yum:
+        name: '*'
+        state: latest
