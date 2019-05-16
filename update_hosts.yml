@@ -1,6 +1,6 @@
 ---
 - name: Register infrastructure server to Satellite
-  hosts: all
+  hosts: {{ idm_hosts }}
   tasks:
     - name: update hosts to latest patch levels
       yum:
